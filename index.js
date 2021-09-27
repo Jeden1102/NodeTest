@@ -1,8 +1,10 @@
 var mysql = require('mysql');
 const http = require('http');
 
-const hostname = '127.0.0.1';
-const port = process.env.PORT || 5000;
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const port = process.env.PORT || 3000;
 
 var con = mysql.createConnection({
   host: "mazika.mysql.dhosting.pl",
@@ -25,12 +27,6 @@ con.connect(function(err) {
 
 
 
-const server = http.createServer((req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.writeHead(200, { 'Content-Type': 'application/json' });
-  res.write(JSON.stringify(data));
-  res.end();
-});
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+app.get('/', (req, res) => {
+  res.json({'message': data});
+})
