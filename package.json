@@ -9,15 +9,11 @@
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/geshan/programming-langugages-api.git"
+      "url": "git+https://github.com/Jeden1102/NodeTest.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "bugs": {
-      "url": "https://github.com/geshan/programming-langugages-api/issues"
-    },
-    "homepage": "https://github.com/geshan/programming-langugages-api#readme",
     "dependencies": {
       "express": "^4.17.1",
       "mysql2": "^2.2.5"
